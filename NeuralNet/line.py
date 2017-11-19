@@ -261,44 +261,27 @@ with tf.Session() as sess:
         for (x, y) in zip(train_X, train_Y):
             sess.run(optimizer, feed_dict={X: x, Y: y})
 
-        # Display logs per epoch step
-        # if (epoch+1) % display_step == 0:
-        #     c = sess.run(cost, feed_dict={X: train_X, Y:train_Y})
-        #     print("Epoch:", '%04d' % (epoch+1), "cost=", "{:.9f}".format(c), \
-        #         "W=", sess.run(W), "b=", sess.run(b))
+    test_voltages = numpy.asarray([])
 
-    # print("Optimization Finished!")
-    # training_cost = sess.run(cost, feed_dict={X: train_X, Y: train_Y})
-    # print("Training cost=", training_cost, "W=", sess.run(W), "b=", sess.run(b), '\n')
-    #
-    # # Graphic display
-    # plt.plot(train_X, train_Y, 'ro', label='Original data')
-    # plt.plot(train_X, sess.run(W) * train_X + sess.run(b), label='Fitted line')
-    # plt.legend()
-    # plt.show()
-    #
-    # # Testing example
-    # test_X = numpy.asarray([6.83, 4.668, 8.9, 7.91, 5.7, 8.7, 3.1, 2.1])
-    # test_Y = numpy.asarray([1.84, 2.273, 3.2, 2.831, 2.92, 3.24, 1.35, 1.03])
-    #
-    # print("Testing... (Mean square loss Comparison)")
-    # testing_cost = sess.run(
-    #     tf.reduce_sum(tf.pow(pred - Y, 2)) / (2 * test_X.shape[0]),
-    #     feed_dict={X: test_X, Y: test_Y})  # same function as cost above
-    # print("Testing cost=", testing_cost)
-    # print("Absolute mean square loss difference:", abs(
-    #     training_cost - testing_cost))
-    #
-    # plt.plot(test_X, test_Y, 'bo', label='Testing data')
-    # plt.plot(train_X, sess.run(W) * train_X + sess.run(b), label='Fitted line')
-    # plt.legend()
-    # plt.show()
+    #######################################################################
+    # input test voltages from generator here instead of this for loop...
+    # can be in any format, sine hump, line, etc...
+    #######################################################################
+    for i in range(0, 500):
+        test_voltages = numpy.append(test_voltages, (i * 3.3) / 500)
 
-    test_voltages = numpy.asarray([0, 1.1, 2, 2.1, 3, 3.3])
-
-    print(sess.run(pred, feed_dict={X: test_voltages}))
+    t_out = sess.run(pred, feed_dict={X: test_voltages});
 
 
+    filename = "out.txt"
+    dataFile = open( filename, 'w' )
 
+    # Print Calculations
+    idx = 0;
+    for temp in t_out:
+        print(str( test_voltages[idx] )  + ", " + str( temp ) );
+        dataFile.write( str( test_voltages[idx] )  + ", " + str( temp ) + "\n" );
+        idx += 1
+
+    dataFile.close()
 # END line.py
-
