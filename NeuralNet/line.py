@@ -20,7 +20,7 @@ import numpy
 rng = numpy.random
 
 # Parameters
-learning_rate   = 0.01
+learning_rate   = 0.03
 training_epochs = 1000
 
 # Training Data
@@ -29,7 +29,7 @@ train_Y = numpy.asarray([])
 
 test_voltages = numpy.asarray([])
 
-print("NOTE: file must exist, \"train.txt\")" );
+print("NOTE: file must exist, \"train.txt\")\n" );
 # TRAINS NETWORK on assumption that VOLTAGE=TEMPERATURE is true
 f = open("train.txt", 'r')
 for line in f:
@@ -40,7 +40,7 @@ for line in f:
 
 n_samples = train_X.shape[0]
 
-infilename    =        input( " Enter the test input      filename:       " );
+infilename    =        input( " Enter the test input filename:            " );
 outfilename   =        input( " Enter the inferred output filename:       " );
 f = open(infilename, 'r')
 
