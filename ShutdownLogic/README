@@ -1,0 +1,10 @@
+Run via command line by typing:
+
+ ./a.out <temp in> <thresholds in> <max line length> <output file name>
+ 
+The max line length should be a large number such as 255. The thresholds in should
+be configured with the first row being the total number of devices in the left
+column and the remaing rows should have upper temperature limits in the left 
+column and lower temperature limits in the right column. 
+
+Compile with gcc.
