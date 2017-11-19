@@ -16,20 +16,18 @@ Project: https://github.com/aymericdamien/TensorFlow-Examples/
 from __future__ import print_function
 import tensorflow as tf
 import numpy
-import matplotlib.pyplot as plt
 
 rng = numpy.random
 
 # Parameters
-learning_rate   = 0.03
+learning_rate   = 0.01
 training_epochs = 1000
 
 # Training Data
 train_X = numpy.asarray([])
-
 train_Y = numpy.asarray([])
-test_voltages = numpy.asarray([])
 
+test_voltages = numpy.asarray([])
 
 print("NOTE: file must exist, \"train.txt\")" );
 # TRAINS NETWORK on assumption that VOLTAGE=TEMPERATURE is true
