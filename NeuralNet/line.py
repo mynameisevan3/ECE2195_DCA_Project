@@ -94,8 +94,8 @@ with tf.Session() as sess:
     # Print Calculations
     idx = 0;
     for temp in t_out:
-        print(str( min([test_voltages[idx], 0]) )  + ", " + str( temp ) );
-        dataFile.write( str( min([test_voltages[idx], 0]) )  + ", " + str( temp ) + "\n" );
+        print(str( test_voltages[idx])  + ", " + str( temp ) );
+        dataFile.write( str( test_voltages[idx])  + ", " + str( temp ) + "\n" );
         idx += 1
 
     dataFile.close()
