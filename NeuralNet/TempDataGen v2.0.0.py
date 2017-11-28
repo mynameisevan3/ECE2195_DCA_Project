@@ -15,6 +15,7 @@ import random;
 SENSOR_TMIN = -50 # trained sensor minimum temp, if these are changed, retrain network
 SENSOR_TMAX = 50 # trained sensor max temp, if these are changed, retrain network
 SENSOR_VMAX = 3.3
+
 filename = "file";
 length   = 500;
 pattern  = 1;
