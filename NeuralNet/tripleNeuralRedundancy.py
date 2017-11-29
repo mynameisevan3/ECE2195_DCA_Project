@@ -50,10 +50,10 @@ for line in f:
 print(train_V.shape, train_T.shape)
 n_samples = train_V.shape[0]
 
-# infilename    =        input( " Enter the test input filename:            " );
-# outfilename   =        input( " Enter the inferred output filename:       " );
-infilename = "v_triplex_test.txt"
-outfilename = "inferred_tnr.txt"
+infilename    =        input( " Enter the test input filename:            " );
+outfilename   =        input( " Enter the inferred output filename:       " );
+# infilename = "v_triplex_test.txt"
+# outfilename = "inferred_tnr.txt"
 
 f = open(infilename, 'r')
 
