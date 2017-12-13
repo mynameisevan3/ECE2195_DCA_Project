@@ -1,0 +1,135 @@
+Type: Markov
+Number of nodes: 7
+Number of arcs: 10
+Number of parameters: 0
+Node:
+Name: 1,1,1
+X, Y: 365,-115
+LabelX, LabelY: 365,-84
+
+Node:
+Name: 3,3,1
+X, Y: 205,285
+LabelX, LabelY: 204,316
+
+Node:
+Name: 2,3,1
+X, Y: 325,205
+LabelX, LabelY: 323,184
+
+Node:
+Name: 3,2,1
+X, Y: 325,365
+LabelX, LabelY: 324,395
+
+Node:
+Name: 2,2,1
+X, Y: 685,285
+LabelX, LabelY: 684,315
+
+Node:
+Name: UF
+X, Y: 565,605
+LabelX, LabelY: 570,635
+
+Node:
+Name: SF
+X, Y: 605,5
+LabelX, LabelY: 611,8
+
+Arc:
+Source: 3,3,1
+Dest: 2,3,1
+ArcPoints: [java.awt.Point[x=230,y=289], java.awt.Point[x=326,y=226]]
+ArcLoopValue: []
+LabelX, LabelY: 256,234
+Rate: 3*lambdaS*(1-lambdaL)*(1-lambdaN)^3
+
+Arc:
+Source: 3,3,1
+Dest: 3,2,1
+ArcPoints: [java.awt.Point[x=233,y=306], java.awt.Point[x=329,y=369]]
+ArcLoopValue: []
+LabelX, LabelY: 259,314
+Rate: 3*lambdaN*(1-lambdaL)*(1-lambdaS)^3
+
+Arc:
+Source: 2,3,1
+Dest: 2,2,1
+ArcPoints: [java.awt.Point[x=354,y=220], java.awt.Point[x=686,y=294]]
+ArcLoopValue: []
+LabelX, LabelY: 498,234
+Rate: 3*lambdaN*(1-lambdaL)*(1-lambdaS)^2
+
+Arc:
+Source: 3,2,1
+Dest: 2,2,1
+ArcPoints: [java.awt.Point[x=353,y=374], java.awt.Point[x=685,y=300]]
+ArcLoopValue: []
+LabelX, LabelY: 497,314
+Rate: 3*lambdaS*(1-lambdaL)*(1-lambdaN)^2
+
+Arc:
+Source: 3,2,1
+Dest: UF
+ArcPoints: [java.awt.Point[x=352,y=388], java.awt.Point[x=571,y=607]]
+ArcLoopValue: []
+LabelX, LabelY: 439,474
+Rate: lambdaL*(1-S)*((1-lambdaN)^2)*(1-lambdaS)^3+2*lambdaN*(1-lambdaL)*(1-lambdaS)^3
+
+Arc:
+Source: 2,2,1
+Dest: UF
+ArcPoints: [java.awt.Point[x=697,y=314], java.awt.Point[x=651,y=442], java.awt.Point[x=587,y=607]]
+ArcLoopValue: []
+LabelX, LabelY: 652,381
+Rate: (1-S)*lambdaL*((1-lambdaN)*(1-lambdaS))^2+(1-lambdaL)*2*(lambdaS*(1-lambdaN)^2+lambdaN*(1-lambdaS)^2)
+
+Arc:
+Source: 2,2,1
+Dest: SF
+ArcPoints: [java.awt.Point[x=693,y=286], java.awt.Point[x=621,y=34]]
+ArcLoopValue: []
+LabelX, LabelY: 635,163
+Rate: S*lambdaL*((1-lambdaN)*(1-lambdaS))^2
+
+Arc:
+Source: 2,3,1
+Dest: SF
+ArcPoints: [java.awt.Point[x=350,y=209], java.awt.Point[x=606,y=26]]
+ArcLoopValue: []
+LabelX, LabelY: 456,94
+Rate: S*lambdaL*((1-lambdaN)^3)*((1-lambdaS))^2
+
+Arc:
+Source: 3,2,1
+Dest: SF
+ArcPoints: [java.awt.Point[x=349,y=391], java.awt.Point[x=544,y=778], java.awt.Point[x=959,y=745], java.awt.Point[x=1084,y=394], java.awt.Point[x=629,y=31]]
+ArcLoopValue: []
+LabelX, LabelY: 729,738
+Rate: S*lambdaL*((1-lambdaN)^2)*((1-lambdaS))^3
+
+Arc:
+Source: 2,3,1
+Dest: UF
+ArcPoints: [java.awt.Point[x=325,y=222], java.awt.Point[x=60,y=222], java.awt.Point[x=59,y=607], java.awt.Point[x=565,y=617]]
+ArcLoopValue: []
+LabelX, LabelY: 37,417
+Rate: lambdaL*(1-S)*((1-lambdaS)^2)*(1-lambdaN)^3+2*lambdaS*(1-lambdaL)*(1-lambdaN)^3
+
+
+Output:
+Outputs created: 0
+Hashtable Init Prob: 1
+Name InitProb: Startup
+Values InitProb: {UF=0, SF=0, 1,0,1=1}
+Hashtable Reward: 0
+Vector UP: []
+Hashtable UP: 0
+Vector DOWN: []
+Hashtable DOWN: 0
+Vector Indice Text: []
+
+Needed:
+Reward Needed:false
+

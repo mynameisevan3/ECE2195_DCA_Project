@@ -1,0 +1,51 @@
+Type: Markov
+Number of nodes: 3
+Number of arcs: 2
+Number of parameters: 0
+Node:
+Name: UF
+X, Y: 1165,125
+LabelX, LabelY: 1170,154
+
+Node:
+Name: SF
+X, Y: 1165,325
+LabelX, LabelY: 1171,353
+
+Node:
+Name: 1,1,1
+X, Y: 405,125
+LabelX, LabelY: 405,156
+
+Arc:
+Source: 1,1,1
+Dest: UF
+ArcPoints: [java.awt.Point[x=434,y=137], java.awt.Point[x=1165,y=137]]
+ArcLoopValue: []
+LabelX, LabelY: 777,114
+Rate: lambdaN*(1-lambdaL)*(1-lambdaS)+lambdaS*(1-lambdaL)*(1-lambdaN)+(1-S)*lambdaL*(1-lambdaS)*(1-lambdaN)
+
+Arc:
+Source: 1,1,1
+Dest: SF
+ArcPoints: [java.awt.Point[x=434,y=141], java.awt.Point[x=1166,y=333]]
+ArcLoopValue: []
+LabelX, LabelY: 778,214
+Rate: S*lambdaL*(1-lambdaS)*(1-lambdaN)
+
+
+Output:
+Outputs created: 0
+Hashtable Init Prob: 1
+Name InitProb: Startup
+Values InitProb: {UF=0, SF=0, 1,0,1=1}
+Hashtable Reward: 0
+Vector UP: []
+Hashtable UP: 0
+Vector DOWN: []
+Hashtable DOWN: 0
+Vector Indice Text: []
+
+Needed:
+Reward Needed:false
+
