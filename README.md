@@ -2,16 +2,31 @@
 An organized collection of all ECE2195 DCA Project Files for Team 2.
 
 # Contains
-NeuralNet
-  TempDataGen v2.0.0.py - updated temperature sensor data generator. 
-  line.py               - single sensor neural network.
-  (undeveloped)         - multiple sensor neural network.
+
+EditedCases                 - all temperature sensor data.
+  
+Graphs                      - all graphs produced in analysis of the neural networks.
+
+InjectionLogic              - shutdown logic utilized in fault injection.
+  threshold.txt             - final device temperature thresholds.
+  Shutdown.c                - revisions to the original shutdown decision logic for fault injection.
+
+InjectionLogicTMR           - TMR shutdown logic.
+  ShutdownTMR.c             - adaptations to the fault-injectable shutdown logic program for TMR.
+  threshold.txt             - final device temperature thresholds.
+
+NeuralNet                   - neural network programming, scripts, training data, and associated documentation.
+  TempDataGen v2.0.0.py     - updated temperature sensor data generator. 
+  TempDataGen_triplex.py    - revised temperature sensor data for triple redundant neural network.
+  line.py                   - single sensor neural network.
+  tripleNeuralRedundancy.py - multiple sensor neural network.
+  Various training text files and test output CSVs.
 
 ShutdownLogic
-  README                - Evan Kain's original Shutdown.c logic readme.
-  Shutdown.c            - shutdown logic program.
-  Shutdown.h            - shutdown logic header file.
-  threshold.txt         - device temperature thresholds, currently corresponding to one's in email.
-  (undeveloped)         - shutdown logic program with incorporated TMR.
+  README                    - Evan Kain's original Shutdown.c logic readme.
+  Shutdown.c                - shutdown logic program.
+  Shutdown.h                - shutdown logic header file.
+  threshold.txt             - original device temperature thresholds.
+  Assorted text files for testing.
 
-Assorted temperature data and output files may also be included.
+David Langerman - Evan Gretok - Evan Kain
