@@ -15,6 +15,8 @@ InjectionLogicTMR           - TMR shutdown logic.
 * ShutdownTMR.c             - adaptations to the fault-injectable shutdown logic program for TMR.
 * threshold.txt             - final device temperature thresholds.
 
+Models                      - SHARPE theoretical project Markov models and images.
+
 NeuralNet                   - neural network programming, scripts, training data, and associated documentation.
 * line.py                   - single sensor neural network.
 * TempDataGen v2.0.0.py     - updated temperature sensor data generator. 
